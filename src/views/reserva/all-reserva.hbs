@@ -1,0 +1,46 @@
+<div class="row">
+    {{#each reserva}}
+    <div class="col-md-3 my-4">
+        <div class="card">
+            <div class="card-body text-dark ">
+                <h4 class="mb-3 d-flex justify-content-between align-items-center">
+                   <strong>Recordatorio</strong> 
+                    <a href="/reserva/edit/{{_id}}"><i class="fas fa-edit mx-2"></i></a>
+                </h4>
+                <h5 class="card-dia">
+                    <strong> Dia: </strong> {{dia}}
+                </h5>
+                <h5 class="card-mes">
+                    <strong> Mes: </strong> {{mes}}
+                </h5>
+                <h5 class="card-hora">
+                    <strong> Hora: </strong> {{hora}}
+                </h5>
+                <h5 class="card-servicio">
+                    <strong> Servicio: </strong> {{servicio}}
+                </h5>
+                <h5 class="card-placa">
+                    <strong> Placa: </strong> {{placa}}
+                </h5>                
+                <h5 class="card-telefono">
+                    <strong> Teléfono: </strong> {{telefono}}
+                </h5>
+                <form action="/reserva/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger btn-block btn-sm mt-3" type="submit">
+                        Eliminar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body text-dark text-center mb-3">
+            <h2>Hola {{user.name}} !</h2>
+            <p class="lead my-4">Aun no tienes reservas</p>
+            <a href="/reserva/add" class="btn btn-success btn-block">Haz tu reserva</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

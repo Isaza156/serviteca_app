@@ -1,0 +1,39 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header text-center text-dark">
+            <h3>Agregar Reserva</h3>
+        </div>
+        <div class="card-body">
+            <form action="/reserva/add-reserva" method="POST">
+                <div class="form-group">
+                    <input type="text" name="dia" class="form-control" placeholder="Dia" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="mes" class="form-control" placeholder="Mes">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="hora" class="form-control" placeholder="Hora">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="servicio" class="form-control" placeholder="Servicio">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="placa" class="form-control" placeholder="Placa">
+                </div>               
+                <div class="form-group">
+                    <input type="text" name="telefono" class="form-control" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Aceptar
+                    </button>
+                </div>
+                <div class="form-group">
+                    <a href="/" class="btn btn-danger btn-block mt-4">
+                        Cancelar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

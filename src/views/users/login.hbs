@@ -1,0 +1,30 @@
+<div class="row text-white">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h3 class="text-center text-dark">
+                    Iniciar sesión
+                </h3>
+            </div>
+            <div class="card-body">
+                <form action="/users/login" method="POST">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Correo Electrónico"
+                            autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block mt-4">
+                            Aceptar
+                        </button>
+                        <a href="/" class="btn btn-danger btn-block mt-4">
+                            Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

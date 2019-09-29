@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-navbar text-white ">
+        
+    <div class="container">
+        
+        <a class=" navbar-brand ml-5 pl-3" href="/">Inicio</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse text-white " id="navbarNav">
+            
+            <ul class="navbar-nav ml-auto ">
+                {{#if user}}
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reserva
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-dark" href="/reserva">Tus Reservas</a>
+                        <a class="dropdown-item text-dark" href="/reserva/add">Agregar Reserva</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-dark" href="/users/logout">Desconectarse</a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/users/login">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/users/create">Registrarse</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>

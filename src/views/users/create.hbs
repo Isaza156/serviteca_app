@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header text-dark text-center">
+              <h3>
+Regístrese
+              </h3>  
+            </div>
+            <div class="card-body">
+                <form action="/users/create" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Nombre" value="{{name}}"
+                            autofocus >
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Correo Electrónico"
+                            value="{{email}}" >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña"
+                            minlength="4" value="{{password}}" >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirmar Contraseña" minlength="4" value="{{confirm_password}}" >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block mt-4">
+                            Crear
+                        </button>
+                        <a href="/" class="btn btn-danger btn-block mt-4">
+                            Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
